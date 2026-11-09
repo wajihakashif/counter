@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: black;
+            text-align: center;
+            padding: 100px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: blue;
+        }
+
+        #count {
+            font-size: 50px;
+            color: black;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .increase {
+            background-color: green;
+        }
+
+        .decrease {
+            background-color: red;
+        }
+
+        .reset {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Counter</h1>
+
+        <h2 id="count">0</h2>
+
+        <button class="increase" onclick="increase()">
+            Increase
+        </button>
+
+        <button class="decrease" onclick="decrease()">
+            Decrease
+        </button>
+
+        <button class="reset" onclick="reset()">
+            Reset
+        </button>
+
+    </div>
+
+    <script>
+
+        let number = 0;
+
+        function increase() {
+            number++;
+            document.getElementById("count").innerHTML = number;
+        }
+
+        function decrease() {
+            number--;
+            document.getElementById("count").innerHTML = number;
+        }
+
+        function reset() {
+            number = 0;
+            document.getElementById("count").innerHTML = number;
+        }
+
+    </script>
+
+</body>
+</html>
